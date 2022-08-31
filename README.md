@@ -1,4 +1,4 @@
-# Somfy plugin for Domoticz
+# Somfy plugin for Domoticz - Beta version
 
 
 To install plugin
