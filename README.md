@@ -1,43 +1,12 @@
 # Somfy plugin for Domoticz
-Original script was written by Nonolk : https://github.com/nonolk/domoticz_tahoma_blind.git
-
-Special thanks to JanJaap who did the rewritting of the plugin
-
-Domoticz plugin writen in Python to first support Somfy IO roller shutters using Tahoma/Connexoon. 
-Basic support of RTS (Open/Close) is also included without return state (limitation due to RTS), it means for RTS the state of the device won't be updated if the device state is modified outside of domoticz.
-
-To use this plugin you need to install the last stable release of Domoticz https://www.domoticz.com and to install the required python library.
-
-The plugin currently support the following device types: roller Shutters, screens (interior/exterior), awning, pergolas, garage door, windows and blinds(postions only, no slats control).
-
-## Somfy login
-
-You need to register you Somfy products and add them to your Tahoma or Connexoon box
-
-https://www.somfy.nl/nieuw-account-aanmaken
-
-https://www.tahomalink.com/enduser-mobile-web/steer-html5-client/tahoma/
 
 
-
-## Installation
-### Prerequisites
-Python version 3.7 or higher required & Domoticz version 2022.1 (due to extended plugin framework) or greater. 
-
-First, Follow the Domoticz guide on [Using Python Plugins](https://www.domoticz.com/wiki/Using_Python_plugins).
-
-To install:
-```
-sudo apt-get update
-sudo apt-get install python3 libpython3-dev libpython3.7-dev
-sudo apt-get install python3-requests
-```
-
-### plugin
+To install plugin
 Then go in your Domoticz directory using a command line and open the plugins directory.
 ```
 cd domoticz/plugins
 git clone https://github.com/MadPatrick/somfy
+git branch beta 
 ```
 Restart Domoticz with 
 ```
@@ -47,6 +16,7 @@ sudo systemctl restart domoticz.
 to update:
 ```
 cd domoticz/plugins/somfy
+git branch beta 
 git pull
 ```
 
