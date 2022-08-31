@@ -132,12 +132,14 @@ class BasePlugin:
         if Unit == 1:
             # unit 1 used for up/down movement
             if (str(Command) == "Off"):
-                commands["name"] = "close"
-            elif (str(Command) == "On"):
                 commands["name"] = "open"
+            elif (str(Command) == "On"):
+                commands["name"] = "close"
+            elif (str(Command) == "Stop"):
+                commands["name"] = "stop"
             elif ("Set Level" in str(Command)):
                 commands["name"] = "setClosure"
-                tmp = 100 - int(Level)
+                tmp = int(Level)
                 params.append(tmp)
                 commands["parameters"] = params
         elif Unit == 2:
